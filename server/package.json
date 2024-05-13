@@ -1,0 +1,22 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file=.env index.js",
+    "dev": "nodemon --env-file=.env index.js"
+  },
+  "author": "rashmi pullur",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "express": "^4.19.2",
+    "getstream": "^8.4.1",
+    "stream-chat": "^8.31.0",
+    "twilio": "^5.0.4"
+  }
+}
