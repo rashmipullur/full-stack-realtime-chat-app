@@ -1,6 +1,6 @@
 import { connect } from "getstream";
 import bcrypt from "bcrypt";
-import StreamChat from "stream-chat";
+import { StreamChat } from "stream-chat";
 import crypto, { hash } from "crypto";
 
 const api_key = process.env.STREAM_API_KEY;
