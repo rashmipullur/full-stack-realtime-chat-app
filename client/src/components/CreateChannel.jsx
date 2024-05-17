@@ -8,7 +8,7 @@ const ChannelNameInput = ({ channelName = "", setChannelName }) => {
   const handleChange = (event) => {
     event.preventDefault();
 
-    setChannelName(event.target.name);
+    setChannelName(event.target.value);
   };
 
   return (
@@ -17,7 +17,7 @@ const ChannelNameInput = ({ channelName = "", setChannelName }) => {
       <input
         value={channelName}
         onChange={handleChange}
-        placeholder="channel-name (np spaces)"
+        placeholder="channel-name"
       />
       <p>Add Members</p>
     </div>
@@ -68,7 +68,7 @@ const CreateChannel = ({ createType, setIsCreating }) => {
       <UserList setSelectedUsers={setSelectedUsers} />
       <div className="create-channel__button-wrapper" onClick={createChannel}>
         <p>
-          {createType === "team" ? "Create Channel" : "Create Message Group"}{" "}
+          {createType === "team" ? "Create Channel" : "Create Message Group"}
         </p>
       </div>
     </div>
