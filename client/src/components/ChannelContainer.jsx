@@ -1,5 +1,5 @@
 import React from "react";
-import { Channel, useChatContext, Message } from "stream-chat-react";
+import { Channel, Message } from "stream-chat-react";
 
 import { ChannelInner, CreateChannel, EditChannel } from "./";
 
@@ -10,8 +10,6 @@ const ChannelContainer = ({
   setIsEditing,
   createType,
 }) => {
-  const { channel } = useChatContext();
-
   if (isCreating) {
     return (
       <div className="channel__container">

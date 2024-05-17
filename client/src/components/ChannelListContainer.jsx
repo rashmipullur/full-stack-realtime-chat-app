@@ -65,7 +65,7 @@ const ChannelListContent = ({
       <SideBar logout={logout} />
       <div className="channel-list__list__wrapper">
         <CompanyHeader />
-        <ChannelSearch />
+        <ChannelSearch setToggleContainer={setToggleContainer} />
         <ChannelList
           filters={filters}
           channelRenderFilterFn={customChannelTeamFilter}
@@ -135,6 +135,7 @@ const ChannelListContainer = ({
           setIsEditing={setIsEditing}
         />
       </div>
+
       <div
         className="channel-list__container-responsive"
         style={{

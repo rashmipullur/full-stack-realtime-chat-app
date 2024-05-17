@@ -13,7 +13,7 @@ const TeamChannelPreview = ({
 
   const ChannelPreview = () => (
     <p className="channel-preview__item">
-      # {channel?.data?.name || channel?.data?.id}{" "}
+      # {channel?.data?.name || channel?.data?.id}
     </p>
   );
 
@@ -21,6 +21,8 @@ const TeamChannelPreview = ({
     const members = Object.values(channel.state.members).filter(
       ({ user }) => user.id !== client.userID
     );
+
+    console.log(members[0]);
 
     return (
       <div className="channel-preview__item single">
@@ -45,7 +47,6 @@ const TeamChannelPreview = ({
         setIsCreating(false);
         setIsEditing(false);
         setActiveChannel(channel);
-
         if (setToggleContainer) {
           setToggleContainer((prevState) => !prevState);
         }

@@ -21,7 +21,7 @@ const UserItem = ({ user, setSelectedUsers }) => {
   const handleSelect = () => {
     if (selected) {
       setSelectedUsers((prevUsers) =>
-        prevUsers.filter((prevUsers) => prevUsers !== user.id)
+        prevUsers.filter((prevUser) => prevUser !== user.id)
       );
     } else {
       setSelectedUsers((prevUsers) => [...prevUsers, user.id]);
@@ -96,7 +96,7 @@ const UserList = ({ setSelectedUsers }) => {
   return (
     <ListContainer>
       {loading ? (
-        <div className="user-list__message">Loading users ...</div>
+        <div className="user-list__message">Loading users...</div>
       ) : (
         users?.map((user, i) => (
           <UserItem
